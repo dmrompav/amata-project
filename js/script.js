@@ -258,6 +258,12 @@ document.addEventListener("mousemove", function (e) {
       rotationY = (e.clientY - window.innerHeight / 2) / window.innerHeight * 40 + 7;
   menu.style.transform = 'rotateX(' + rotationY + 'deg) rotateY(' + rotationX + 'deg)';
 });
+document.querySelector('.hover-field').addEventListener("mouseover", function () {
+  menuName.classList.add("menu__name-opened");
+});
+document.querySelector('.hover-field').addEventListener("mouseout", function () {
+  menuName.classList.remove("menu__name-opened");
+});
 selBut.forEach(function (e) {
   return e.addEventListener("click", function () {
     for (var i = 0; i < quantity; i++) {
